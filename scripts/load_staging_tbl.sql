@@ -9,7 +9,7 @@ Script Purpose:
     - Uses the `LOAD DATA LOCAL INFILE` command to load data from csv Files to staging tables.
 
 Note:
-	- MySQL does not support 'LOAD DATA LOCAL INFILE' in stored procedure (security Concern).
+    - MySQL does not support 'LOAD DATA LOCAL INFILE' in stored procedure (security Concern).
     - Use below queries to first load data into staging tables, then use 
 	  stored procedure to load into bronze layer. 
 ===============================================================================
