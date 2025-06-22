@@ -90,8 +90,9 @@ IGNORE 1 ROWS
 (@CID,@BDATE,@GEN)
 SET 
     CID = NULLIF(TRIM(@CID),''),
-    BDATE = STR_TO_DATE(NULLIF(TRIM(@CID),''), '%Y-%m-%d %H:%i:%s'),
-    GEN = NULLIF(TRIM(@CID),'');
+    BDATE = STR_TO_DATE(NULLIF(TRIM(@BDATE),''), '%Y-%m-%d %H:%i:%s'),
+    GEN = NULLIF(TRIM(@GEN),'');
+
 
 TRUNCATE TABLE staging.erp_loc_a101;
 LOAD DATA LOCAL INFILE '/Users/kunalmpawar/Downloads/sql-data-warehouse-project/datasets/source_erp/LOC_A101.csv'
