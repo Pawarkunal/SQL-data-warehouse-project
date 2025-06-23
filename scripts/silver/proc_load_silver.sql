@@ -105,3 +105,27 @@ SELECT
     AS SIGNED) AS sls_price -- Derive price if original value is invalid
 FROM bronze.crm_sales_details
 
+-------------------------------------------
+
+TRUNCATE TABLE silver.erp_cust_az12;
+INSERT INTO silver.erp_cust_az12 (
+	cid,
+    bdate,
+    gen)
+SELECT 
+CASE
+	WHEN cid LIKE 'NAS%' THEN SUBSTRING(cid,4,LENGTH(cid))
+    ELSE cid
+END as cid, -- Removed 'NAS' from cid as prefix if present
+CASE
+	WHEN bdate > CURRENT_DATE() THEN NULL
+    ELSE bdate
+END AS bdate, -- Set future birthdates to NULL
+CASE
+	WHEN UPPER(TRIM(gen)) LIKE 'M%' THEN 'Male'
+    WHEN UPPER(TRIM(gen)) LIKE 'F%' THEN 'Female'
+    ELSE NULL
+END AS gen -- Normalize gender to readable format
+FROM bronze.erp_cust_az12;
+
+
