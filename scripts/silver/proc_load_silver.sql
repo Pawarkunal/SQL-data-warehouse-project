@@ -128,4 +128,19 @@ CASE
 END AS gen -- Normalize gender to readable format
 FROM bronze.erp_cust_az12;
 
+----------------------------------------------
 
+TRUNCATE TABLE silver.erp_loc_a101;
+INSERT INTO silver.erp_loc_a101 (
+cid,
+cntry)
+SELECT
+	 REPLACE(COALESCE(cid, ''), '-', '') AS cid, 
+	CASE 
+		WHEN UPPER(TRIM(REPLACE(REPLACE(REPLACE(cntry, CHAR(9), ''), CHAR(10), ''), CHAR(13), ''))) LIKE 'DE%' THEN 'Germany'
+		WHEN UPPER(TRIM(REPLACE(REPLACE(REPLACE(cntry, CHAR(9), ''), CHAR(10), ''), CHAR(13), ''))) LIKE 'US%' THEN 'United States'
+		WHEN TRIM(REPLACE(REPLACE(REPLACE(cntry, CHAR(9), ''), CHAR(10), ''), CHAR(13), '')) IS NULL 
+				OR TRIM(REPLACE(REPLACE(REPLACE(cntry, CHAR(9), ''), CHAR(10), ''), CHAR(13), '')) = '' THEN 'n/a'
+		ELSE TRIM(REPLACE(REPLACE(REPLACE(cntry, CHAR(9), ''), CHAR(10), ''), CHAR(13), ''))
+	END AS cntry -- Normalize and handle null, missing countries
+FROM bronze.erp_loc_a101;
