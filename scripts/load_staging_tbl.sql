@@ -72,7 +72,10 @@ SET
 	sls_due_dt     = NULLIF(TRIM(@sls_due_dt), ''),
 	sls_sales      = NULLIF(TRIM(@sls_sales), ''),
 	sls_quantity   = NULLIF(TRIM(@sls_quantity), ''),
-	sls_price      = NULLIF(TRIM(@sls_price), '');
+	sls_price      = CASE 
+				WHEN TRIM(@sls_price) = '' or TRIM(@sls_price) = 0 THEN NULL
+				ELSE CAST(@sls_price AS SIGNED)
+			 END;
 
 
 /*
