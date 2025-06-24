@@ -9,7 +9,7 @@ This project demonstrates a comprehensive data warehousing and analytics solutio
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
 ![Data Architecture](documents/medallion_architecture.png)
 
-[notion page](<iframe src="https://candied-dry-db8.notion.site/ebd/2165a2c35f4480b1be2fd7d56ed64af2" width="100%" height="600" frameborder="0" allowfullscreen />)
+[notion page](https://candied-dry-db8.notion.site/SQL-Data-Warehouse-Project-2165a2c35f4480b1be2fd7d56ed64af2)
 1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into MySQL Server Database.
 2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
 3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
