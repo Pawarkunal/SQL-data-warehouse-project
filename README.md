@@ -25,11 +25,20 @@ This project involves:
 4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
 
 ---
+## 🛠️ Important Links & Tools:
 
+- **[Datasets](https://github.com/Pawarkunal/SQL-data-warehouse-project/tree/main/datasets):** Access to the project dataset (csv files).
+- **[MySQL Community Server](https://dev.mysql.com/downloads/mysql/):** Lightweight server for hosting your SQL database.
+- **[MySQL Workbench](https://dev.mysql.com/downloads/workbench/):** GUI for managing and interacting with databases.
+- **[Git Repository](https://github.com/):** Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
+- **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
+- **[Notion](https://www.notion.com/):** All-in-one tool for project management and organization.
+- **[Notion Project Steps (Template)](https://candied-dry-db8.notion.site/SQL-Data-Warehouse-Project-2165a2c35f4480b1be2fd7d56ed64af2?source=copy_link):** Access to All Project Phases and Tasks.
+
+---
 ## 🚀 Project Requirements
 
 ### Building the Data Warehouse (Data Engineering)
-**Project Plan:** Use this [Notion Template](https://candied-dry-db8.notion.site/SQL-Data-Warehouse-Project-2165a2c35f4480b1be2fd7d56ed64af2) for project planning
 #### Objective
 Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
 
