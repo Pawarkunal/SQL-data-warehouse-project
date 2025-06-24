@@ -33,14 +33,14 @@ This project involves:
 - **[Git Repository](https://github.com/):** Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
 - **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
 - **[Notion](https://www.notion.com/):** All-in-one tool for project management and organization.
-- **[Notion Project Steps (Template)](https://candied-dry-db8.notion.site/SQL-Data-Warehouse-Project-2165a2c35f4480b1be2fd7d56ed64af2?source=copy_link):** Access to All Project Phases and Tasks.
+- **[Notion Project Steps (Template)](https://candied-dry-db8.notion.site/-Data-Warehouse-Project-2165a2c35f4480b1be2fd7d56ed64af2?source=copy_link):** Access to All Project Phases and Tasks.
 
 ---
 ## 🚀 Project Requirements
 
 ### Building the Data Warehouse (Data Engineering)
 #### Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+Develop a modern data warehouse using MySQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
 
 #### Specifications
 - **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
