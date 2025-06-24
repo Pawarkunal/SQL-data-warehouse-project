@@ -28,7 +28,7 @@ This project involves:
 ## 🚀 Project Requirements
 
 ### Building the Data Warehouse (Data Engineering)
-
+**Project Plan:**: Use this [Notion Template](https://candied-dry-db8.notion.site/SQL-Data-Warehouse-Project-2165a2c35f4480b1be2fd7d56ed64af2) for project planning
 #### Objective
 Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
 
